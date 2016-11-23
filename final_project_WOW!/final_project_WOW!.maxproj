@@ -2,8 +2,8 @@
 	"name" : "final_project_WOW!",
 	"version" : 1,
 	"creationdate" : -732300580,
-	"modificationdate" : -732300580,
-	"viewrect" : [ 0.0, 0.0, 300.0, 500.0 ],
+	"modificationdate" : -732278085,
+	"viewrect" : [ 33.0, 75.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -14,6 +14,14 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+
+		}
+,
+		"media" : 		{
+			"Vlado_Hudec_Revelations.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1
 			}
 
 		}
