@@ -3,19 +3,21 @@ include("include.js");
 outlets = 2;
 autowatch = 1;
 reset.immediate = 1;
+checkBounds.immediate = 1;
 
 var scale = new Vector( 0.05, 0.05, 0.05 );
-var origin = new Vector( 0., -0.56, -1. );
+var origin = new Vector( 0., -0.465, -1. );
 this.position = new Vector( origin );
 
 function bang() {
-	checkUpperBounds( this.position );
+	checkBounds( this.getPosition() );
 }
 
 function reset() {
 	this.setPosition(origin);
 	outlet( 0, new Array( "position", origin.x, origin.y, origin.z ) );
-	outlet( 0, new Array( "scale", scale.x, scale.y, scale.z ) );
+	outlet( 0, new Array( "scale", this.getScale().x, this.getScale().y, this.getScale().z ) );
+	outlet( 1, new Array( "move", 0., 0., 0. ) );
 }
 
 function getPosition() {
@@ -24,25 +26,34 @@ function getPosition() {
 
 function setPosition( x, y, z ) {		 
 	if (arguments.length === 1) {
-		this.position.set( x );
+		this.getPosition().set( x );
 		this.outPosition();
 	} else {
-		this.position.set( x, y, z );
+		this.getPosition().set( x, y, z );
 		this.outPosition();
 	}
 }
 
 function outPosition() {
-	outlet( 0, new Array( "position", this.position.x, this.position.y, this.position.z ) );
+	outlet( 0, new Array( "position", this.getPosition().x, this.getPosition().y, this.getPosition().z ) );
 }
 
-// Check if the object has exceeded the screen on the positive Y-axis
-function checkUpperBounds( position ) {
-	var YLimit = (Math.abs(position.z) * ( 0.36 + scale.y) ); //The upper limit of the screen, changes as the object moves back
-	if ( position.y > YLimit ) {
-		post(-YLimit - (this.scale.y * 3) +"\n");
-		this.setPosition( position.x, -YLimit - (this.scale.y *3), position.z );
+function getScale() {
+	return this.scale;
+}
+
+// Check if the object has exceeded the screen on the positive Y-axis or exceed some arbitary value on the negative Y-axis
+function checkBounds() {
+	var YLimit = (Math.abs(this.getPosition().z) * ( 0.36 + this.getScale().y) ); //The upper limit of the screen, changes as the object moves back
+	var YLimitLower = -YLimit - (this.getScale().y * 1.1); //The upper limit of the screen, changes as the object moves back
+	if ( this.getPosition().y > YLimit ) {
+		this.setPosition( this.getPosition().x, YLimitLower, this.getPosition().z );
 		this.outPosition();
 		outlet( 1, new Array( "move", 0., 0., 0. ) );
 	}
-}
+	if ( this.getPosition().y < YLimitLower * 1.01) {
+		this.setPosition( this.getPosition().x, YLimitLower, this.getPosition().z );
+		this.outPosition();
+		outlet( 1, new Array( "move", 0., 0., 0. ) );
+	}
+}	
