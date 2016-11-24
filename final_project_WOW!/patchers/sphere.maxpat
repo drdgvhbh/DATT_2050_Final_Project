@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 26.0, 84.0, 1852.0, 930.0 ],
+		"rect" : [ 42.0, 84.0, 1205.0, 930.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -189,7 +189,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 846.200012, 342.333435, 117.0, 22.0 ],
+					"patching_rect" : [ 940.200012, 333.333435, 117.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend setPosition"
 				}
@@ -202,7 +202,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 846.200012, 314.000061, 83.0, 22.0 ],
+					"patching_rect" : [ 940.200012, 296.000061, 83.0, 22.0 ],
 					"style" : "",
 					"text" : "route position"
 				}
@@ -516,9 +516,9 @@
 					"numinlets" : 9,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 295.200012, 307.0, 516.0, 23.0 ],
+					"patching_rect" : [ 295.200012, 305.5, 647.0, 23.0 ],
 					"style" : "",
-					"text" : "jit.gl.mesh @depth_enable 1 @smooth_shading 1 @lighting_enable 1 @poly_mode 1 1"
+					"text" : "jit.gl.mesh main @depth_enable 1 @smooth_shading 1 @lighting_enable 1 @poly_mode 1 1 @matrixoutput 0"
 				}
 
 			}
@@ -531,9 +531,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 295.200012, 262.0, 538.0, 23.0 ],
+					"patching_rect" : [ 295.200012, 262.0, 570.0, 23.0 ],
 					"style" : "",
-					"text" : "jit.gl.gridshape @depth_enable 1 @smooth_shading 1 @lighting_enable 1 @matrixoutput 2"
+					"text" : "jit.gl.gridshape main @depth_enable 1 @smooth_shading 1 @lighting_enable 1 @matrixoutput 2"
 				}
 
 			}
