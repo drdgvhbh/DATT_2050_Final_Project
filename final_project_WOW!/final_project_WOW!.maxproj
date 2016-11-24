@@ -2,7 +2,7 @@
 	"name" : "final_project_WOW!",
 	"version" : 1,
 	"creationdate" : -732300580,
-	"modificationdate" : -732206864,
+	"modificationdate" : -732193958,
 	"viewrect" : [ 327.0, 422.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -24,20 +24,14 @@
 				"local" : 1
 			}
 ,
-			"earth.obj" : 			{
-				"kind" : "model",
-				"local" : 1
-			}
-,
 			"worldMapTex_b_re.jpg" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
+
+		}
 ,
-			"worldMapTex_re.jpg" : 			{
-				"kind" : "imagefile",
-				"local" : 1
-			}
+		"code" : 		{
 
 		}
 
