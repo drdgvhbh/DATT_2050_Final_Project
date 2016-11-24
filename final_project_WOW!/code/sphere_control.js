@@ -5,8 +5,11 @@ autowatch = 1;
 reset.immediate = 1;
 checkBounds.immediate = 1;
 
+var util = Util.getInstance(); //Utility class
+
 var scale = new Vector( 0.05, 0.05, 0.05 );
-var origin = new Vector( 0., -0.465, -1. );
+var origin = new Vector( util.getRandom(2., -1), (-(Math.abs(jsarguments[1]) * ( 0.36 + this.getScale().y) ) )
+	- (this.getScale().y * 1.1), jsarguments[1] );
 this.position = new Vector( origin );
 
 function bang() {
@@ -14,6 +17,8 @@ function bang() {
 }
 
 function reset() {
+	origin = new Vector( util.getRandom(2., -1), (-(Math.abs(jsarguments[1]) * ( 0.36 + this.getScale().y) ) )
+		- (this.getScale().y * 1.1), jsarguments[1] );
 	this.setPosition(origin);
 	outlet( 0, new Array( "position", origin.x, origin.y, origin.z ) );
 	outlet( 0, new Array( "scale", this.getScale().x, this.getScale().y, this.getScale().z ) );
