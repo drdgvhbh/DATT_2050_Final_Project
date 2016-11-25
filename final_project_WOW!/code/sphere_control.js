@@ -8,12 +8,16 @@ checkBounds.immediate = 1;
 var util = Util.getInstance(); //Utility class
 
 var scale = new Vector( 0.05, 0.05, 0.05 );
-var origin = new Vector( util.getRandom(2. * Math.abs(jsarguments[1]), -1 * Math.abs(jsarguments[1]) ), (-(Math.abs(jsarguments[1]) * ( 0.36 + this.getScale().y) ) )
+var origin = new Vector( util.getRandom(2., -1), (-(Math.abs(jsarguments[1]) * ( 0.36 + this.getScale().y) ) )
 	- (this.getScale().y * 1.1), jsarguments[1] );
 this.position = new Vector( origin );
 
 function bang() {
-	checkBounds( this.getPosition() );
+	/*this.setPosition(this.getPosition().x + util.getRandom( 0.02 * Math.abs(jsarguments[1]), -0.01 * Math.abs(jsarguments[1]) ), 
+		this.getPosition().y, 
+		this.getPosition().z );
+	*/
+	checkBounds( this.getPosition());
 }
 
 function reset() {
@@ -63,3 +67,9 @@ function checkBounds() {
 		outlet( 1, new Array( "move", 0., 0., 0. ) );
 	}
 }	
+
+function randomX() {
+	this.setPosition(util.getRandom(2., -1), 
+		this.getPosition().y, 
+		this.getPosition().z );	
+}
