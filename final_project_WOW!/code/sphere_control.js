@@ -1,6 +1,6 @@
 include("include.js");
 
-outlets = 2;
+outlets = 3;
 autowatch = 1;
 reset.immediate = 1;
 checkBounds.immediate = 1;
@@ -8,7 +8,7 @@ checkBounds.immediate = 1;
 var util = Util.getInstance(); //Utility class
 
 var scale = new Vector( 0.05, 0.05, 0.05 );
-var origin = new Vector( util.getRandom(2., -1), (-(Math.abs(jsarguments[1]) * ( 0.36 + this.getScale().y) ) )
+var origin = new Vector( util.getRandom(2. * Math.abs(jsarguments[1]), -1 * Math.abs(jsarguments[1]) ), (-(Math.abs(jsarguments[1]) * ( 0.36 + this.getScale().y) ) )
 	- (this.getScale().y * 1.1), jsarguments[1] );
 this.position = new Vector( origin );
 
@@ -23,6 +23,7 @@ function reset() {
 	outlet( 0, new Array( "position", origin.x, origin.y, origin.z ) );
 	outlet( 0, new Array( "scale", this.getScale().x, this.getScale().y, this.getScale().z ) );
 	outlet( 1, new Array( "move", 0., 0., 0. ) );
+	outlet( 2, new Array( "draw_mode", jsarguments[2] ) );
 }
 
 function getPosition() {
