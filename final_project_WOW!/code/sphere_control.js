@@ -6,10 +6,13 @@ reset.immediate = 1;
 checkBounds.immediate = 1;
 
 var util = Util.getInstance(); //Utility class
+var screenSizeRatio = 16.0 / 9;
+var aLimit = 0.36;
 
 var scale = new Vector( 0.05, 0.05, 0.05 );
-var origin = new Vector( util.getRandom(2., -1), (-(Math.abs(jsarguments[1]) * ( 0.36 + this.getScale().y) ) )
-	- (this.getScale().y * 1.1), jsarguments[1] );
+var origin = new Vector( util.getRandom( aLimit * screenSizeRatio, ), 
+	(-(Math.abs(jsarguments[1]) * ( aLimit + this.getScale().y) ) ) - (this.getScale().y * 1.1), 
+	jsarguments[1] );
 this.position = new Vector( origin );
 
 function bang() {
@@ -21,7 +24,7 @@ function bang() {
 }
 
 function reset() {
-	origin = new Vector( util.getRandom(2., -1), (-(Math.abs(jsarguments[1]) * ( 0.36 + this.getScale().y) ) )
+	origin = new Vector( util.getRandom(2., -1), (-(Math.abs(jsarguments[1]) * ( aLimit + this.getScale().y) ) )
 		- (this.getScale().y * 1.1), jsarguments[1] );
 	this.setPosition(origin);
 	outlet( 0, new Array( "position", origin.x, origin.y, origin.z ) );
@@ -54,7 +57,7 @@ function getScale() {
 
 // Check if the object has exceeded the screen on the positive Y-axis or exceed some arbitary value on the negative Y-axis
 function checkBounds() {
-	var YLimit = (Math.abs(this.getPosition().z) * ( 0.36 + this.getScale().y) ); //The upper limit of the screen, changes as the object moves back
+	var YLimit = (Math.abs(this.getPosition().z) * ( aLimit + this.getScale().y) ); //The upper limit of the screen, changes as the object moves back
 	var YLimitLower = -YLimit - (this.getScale().y * 1.1); //The upper limit of the screen, changes as the object moves back
 	if ( this.getPosition().y > YLimit ) {
 		this.setPosition( this.getPosition().x, YLimitLower, this.getPosition().z );
