@@ -4,6 +4,13 @@ outlets = 3;
 autowatch = 1;
 reset.immediate = 1;
 checkBounds.immediate = 1;
+dyingToTrue.immediate = 1;
+bang.immediate = 1;
+getPosition.immediate = 1;
+outPosition.immediate = 1;
+setPosition.immediate = 1;
+getScale.immediate = 1;
+randomX.immediate = 1;
 
 var util = Util.getInstance(); //Utility class
 var screenSizeRatio = 16.0 / 9;
@@ -32,7 +39,7 @@ function bang() {
 }
 
 function reset() {
-	origin = getOrigin();
+	origin = getOrigin();		
 	this.setPosition(origin);
 	outlet( 0, new Array( "position", origin.x, origin.y, origin.z ) );
 	outlet( 0, new Array( "scale", this.getScale().x, this.getScale().y, this.getScale().z ) );
@@ -68,20 +75,22 @@ function getScale() {
 
 // Check if the object has exceeded the screen on the positive Y-axis or exceed some arbitary value on the negative Y-axis
 function checkBounds() {
-	var YLimit = (Math.abs(this.getPosition().z) * ( aLimit + this.getScale().y) ); //The upper limit of the screen, changes as the object moves back
-	var YLimitLower = (-(Math.abs(jsarguments[1]) * ( aLimit + this.getScale().y) ) ) - (this.getScale().y * 1.1); 
-	if ( this.getPosition().y > YLimit ) {
-		this.setPosition( this.getPosition().x, YLimitLower, this.getPosition().z );
-		this.outPosition();
-		outlet( 1, new Array( "move", 0., 0., 0. ) );
-	}
-	if ( this.getPosition().y < (YLimitLower - 0.01) ) {
-		this.setPosition( this.getPosition().x, YLimitLower, this.getPosition().z );
-		this.outPosition();
-		outlet( 1, new Array( "ease", 0.0 ) );
-		outlet( 1, new Array( "move", 0., 0., 0. ) );
-		outlet( 1, new Array( "ease", 0.5 ) );
+	if (this.dying == false) {
+		var YLimit = (Math.abs(this.getPosition().z) * ( aLimit + this.getScale().y) ); //The upper limit of the screen, changes as the object moves back
+		var YLimitLower = (-(Math.abs(jsarguments[1]) * ( aLimit + this.getScale().y) ) ) - (this.getScale().y * 1.1); 
+		if ( this.getPosition().y > YLimit ) {
+			this.setPosition( this.getPosition().x, YLimitLower, this.getPosition().z );
+			this.outPosition();
+			outlet( 1, new Array( "move", 0., 0., 0. ) );
+		}
+		if ( this.getPosition().y < (YLimitLower - 0.01) ) {
+			this.setPosition( this.getPosition().x, YLimitLower, this.getPosition().z );
+			this.outPosition();
+			outlet( 1, new Array( "ease", 0.0 ) );
+			outlet( 1, new Array( "move", 0., 0., 0. ) );
+			outlet( 1, new Array( "ease", 0.5 ) );
 
+		}
 	}
 }	
 

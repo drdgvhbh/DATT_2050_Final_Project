@@ -2,7 +2,7 @@
 	"name" : "final_project_WOW!",
 	"version" : 1,
 	"creationdate" : -732300580,
-	"modificationdate" : -732108527,
+	"modificationdate" : -731929437,
 	"viewrect" : [ 327.0, 422.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -14,6 +14,11 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+,
+			"pollution_images.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
 			}
 
 		}
