@@ -16,7 +16,8 @@ var util = Util.getInstance(); //Utility class
 var screenSizeRatio = 16.0 / 9;
 var aLimit = 0.36;
 
-var scale = new Vector( 0.05, 0.05, 0.05 );
+var scaleScalar = 0.09;
+var scale = new Vector( scaleScalar, scaleScalar, scaleScalar );
 var origin = getOrigin();
 this.position = new Vector( origin );
 var dying = false;
