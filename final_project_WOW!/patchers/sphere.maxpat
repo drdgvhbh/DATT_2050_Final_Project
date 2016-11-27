@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 42.0, 84.0, 1090.0, 922.0 ],
+		"rect" : [ 26.0, 84.0, 1332.0, 930.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -44,7 +44,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 323.450012, 975.0, 57.0, 22.0 ],
-					"presentation_rect" : [ 368.899994, 965.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "ease 0.5"
 				}
@@ -58,7 +57,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 411.899994, 968.0, 50.0, 22.0 ],
-					"presentation_rect" : [ 303.899994, 968.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "ease 0."
 				}
@@ -85,7 +83,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 208.899994, 943.0, 77.0, 22.0 ],
-					"presentation_rect" : [ 178.0, 938.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "move 0. 0. 0"
 				}
@@ -100,7 +97,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 828.200012, 377.0, 30.0, 30.0 ],
-					"presentation_rect" : [ 827.200012, 375.0, 0.0, 0.0 ],
 					"style" : ""
 				}
 
@@ -1665,7 +1661,7 @@
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 478.200012, 193.0, 175.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "sphere_control.js",
+						"filename" : "sphere_control",
 						"parameter_enable" : 0
 					}
 ,
@@ -1936,9 +1932,9 @@
 					"numinlets" : 9,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 295.200012, 304.5, 445.0, 23.0 ],
+					"patching_rect" : [ 295.200012, 304.5, 647.0, 23.0 ],
 					"style" : "",
-					"text" : "jit.gl.mesh main @depth_enable 1 @smooth_shading 1 @lighting_enable 1"
+					"text" : "jit.gl.mesh main @depth_enable 1 @smooth_shading 1 @lighting_enable 1 @poly_mode 2 2 @matrixoutput 0"
 				}
 
 			}
