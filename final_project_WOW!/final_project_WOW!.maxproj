@@ -2,8 +2,8 @@
 	"name" : "final_project_WOW!",
 	"version" : 1,
 	"creationdate" : -732300580,
-	"modificationdate" : -731842448,
-	"viewrect" : [ -1221.0, 201.0, 300.0, 466.0 ],
+	"modificationdate" : -731838954,
+	"viewrect" : [ 0.0, 201.0, 300.0, 466.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -39,9 +39,39 @@
 				"local" : 1
 			}
 ,
+			"leaf1.dae" : 			{
+				"kind" : "model",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Desktop/Nom nom nom/university/DATT1000/misscene_skrypuch/media",
+					"projectrelativepath" : "../../Desktop/Nom nom nom/university/DATT1000/misscene_skrypuch/media"
+				}
+
+			}
+,
+			"tree_trunkleaves01.obj" : 			{
+				"kind" : "model",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents",
+					"projectrelativepath" : "../../Documents"
+				}
+
+			}
+,
 			"worldMapTex_b_re.jpg" : 			{
 				"kind" : "imagefile",
 				"local" : 1
+			}
+,
+			"sapling.obj" : 			{
+				"kind" : "model",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/DATT_2050_Final_Project-master/final_project_WOW!/media",
+					"projectrelativepath" : "../../Documents/DATT_2050_Final_Project-master/final_project_WOW!/media"
+				}
+
 			}
 ,
 			"waterplant0055.jpg" : 			{
@@ -52,6 +82,24 @@
 		}
 ,
 		"code" : 		{
+
+		}
+,
+		"other" : 		{
+			"sapling.mtl" : 			{
+				"kind" : "file",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/DATT_2050_Final_Project-master/final_project_WOW!/other",
+					"projectrelativepath" : "../../Documents/DATT_2050_Final_Project-master/final_project_WOW!/other"
+				}
+
+			}
+,
+			"tree_trunkleaves01.mtl" : 			{
+				"kind" : "file",
+				"local" : 1
+			}
 
 		}
 
