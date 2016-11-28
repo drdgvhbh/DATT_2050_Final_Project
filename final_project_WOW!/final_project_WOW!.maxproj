@@ -2,7 +2,7 @@
 	"name" : "final_project_WOW!",
 	"version" : 1,
 	"creationdate" : -732300580,
-	"modificationdate" : -731784535,
+	"modificationdate" : -731769401,
 	"viewrect" : [ 8.0, 204.0, 368.0, 625.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -68,12 +68,17 @@
 				"local" : 1
 			}
 ,
+			"rocket.obj" : 			{
+				"kind" : "model",
+				"local" : 1
+			}
+,
 			"starfish_c.jpg" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"rocket.obj" : 			{
+			"rocketFix.obj" : 			{
 				"kind" : "model",
 				"local" : 1
 			}
