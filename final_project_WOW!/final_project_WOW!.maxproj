@@ -2,8 +2,8 @@
 	"name" : "final_project_WOW!",
 	"version" : 1,
 	"creationdate" : -732300580,
-	"modificationdate" : -731828375,
-	"viewrect" : [ -653.0, 204.0, 368.0, 625.0 ],
+	"modificationdate" : -731784535,
+	"viewrect" : [ 8.0, 204.0, 368.0, 625.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -12,8 +12,7 @@
 		"patchers" : 		{
 			"final_project_WOW!.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1,
-				"toplevel" : 1
+				"local" : 1
 			}
 ,
 			"pollution_images.maxpat" : 			{
@@ -34,6 +33,11 @@
 		}
 ,
 		"media" : 		{
+			"Vlado_Hudec_RevelationsShort.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
 			"Vlado_Hudec_Revelations.mp3" : 			{
 				"kind" : "audiofile",
 				"local" : 1
@@ -71,11 +75,6 @@
 ,
 			"rocket.obj" : 			{
 				"kind" : "model",
-				"local" : 1
-			}
-,
-			"Vlado_Hudec_RevelationsShort.mp3" : 			{
-				"kind" : "audiofile",
 				"local" : 1
 			}
 

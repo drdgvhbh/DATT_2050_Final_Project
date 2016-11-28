@@ -88,7 +88,7 @@ function checkBounds() {
 	if ( this.getPosition().y < YLimitLower ) {
 		this.setPosition( this.getPosition().x, YLimit, this.getPosition().z );
 		randomX();
-		this.getPosition().z = util.getRandom( 3., -4.);
+		this.getPosition().z = util.getRandom( 1.5, -2.5);
 		this.outPosition();
 
 		outlet( 1, new Array( "ease", 0.0 ) );
