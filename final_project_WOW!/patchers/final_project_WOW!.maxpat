@@ -38,6 +38,45 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-178",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 143.0, 1319.0, 67.0, 22.0 ],
+					"style" : "",
+					"text" : "0., 2. 5000"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-176",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 160.75, 1380.052612, 43.0, 22.0 ],
+					"style" : "",
+					"text" : "line 0."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-174",
+					"maxclass" : "newobj",
+					"numinlets" : 4,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 158.75, 1429.052612, 115.0, 22.0 ],
+					"style" : "",
+					"text" : "pak position 0. 0. 0."
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-175",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -66,9 +105,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 367.0, 1389.0, 77.0, 22.0 ],
+					"patching_rect" : [ 367.0, 1389.0, 55.0, 22.0 ],
 					"style" : "",
-					"text" : "treemodel01"
+					"text" : "mahtree"
 				}
 
 			}
@@ -797,7 +836,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 545.56665, 265.800049, 60.166668, 22.0 ],
 									"style" : "",
-									"text" : "0.13426"
+									"text" : "0.096964"
 								}
 
 							}
@@ -2043,13 +2082,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-54",
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 311.0, 610.666687, 50.0, 22.0 ],
+					"patching_rect" : [ 311.0, 610.666687, 50.0, 36.0 ],
 					"style" : "",
-					"text" : "66006."
+					"text" : "114908."
 				}
 
 			}
@@ -7395,21 +7435,21 @@
 								"selection" : [ 0.0, 1.0 ],
 								"loop" : 0,
 								"content_state" : 								{
-									"originallength" : [ 0.0, "ticks" ],
-									"slurtime" : [ 0.0 ],
 									"speed" : [ 1.0 ],
-									"mode" : [ "basic" ],
-									"originaltempo" : [ 120.0 ],
-									"originallengthms" : [ 0.0 ],
-									"basictuning" : [ 440 ],
+									"originallength" : [ 0.0, "ticks" ],
 									"pitchshift" : [ 1.0 ],
-									"play" : [ 0 ],
-									"formantcorrection" : [ 0 ],
-									"followglobaltempo" : [ 0 ],
-									"quality" : [ "basic" ],
-									"timestretch" : [ 0 ],
 									"pitchcorrection" : [ 0 ],
-									"formant" : [ 1.0 ]
+									"quality" : [ "basic" ],
+									"mode" : [ "basic" ],
+									"slurtime" : [ 0.0 ],
+									"play" : [ 0 ],
+									"formant" : [ 1.0 ],
+									"originaltempo" : [ 120.0 ],
+									"formantcorrection" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"followglobaltempo" : [ 0 ],
+									"basictuning" : [ 440 ],
+									"timestretch" : [ 0 ]
 								}
 
 							}
@@ -8498,6 +8538,42 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-173", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-178", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-173", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-174", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-174", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-176", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-176", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-178", 0 ]
 				}
 
 			}
@@ -9613,7 +9689,13 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "treemodel01.maxpat",
+				"name" : "MAHTREE.maxpat",
+				"bootpath" : "D:/Repositories/DATT2050_Final_Project/final_project_WOW!/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "leaf01.maxpat",
 				"bootpath" : "D:/Repositories/DATT2050_Final_Project/final_project_WOW!/patchers",
 				"type" : "JSON",
 				"implicit" : 1
@@ -9641,12 +9723,12 @@
 , 			{
 				"name" : "Luca",
 				"default" : 				{
-					"fontname" : [ "Open Sans Semibold" ],
 					"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"elementcolor" : [ 0.786675, 0.801885, 0.845022, 1.0 ],
-					"bgcolor" : [ 0.904179, 0.895477, 0.842975, 0.56 ],
 					"selectioncolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
+					"bgcolor" : [ 0.904179, 0.895477, 0.842975, 0.56 ],
 					"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+					"fontname" : [ "Open Sans Semibold" ],
 					"color" : [ 0.475135, 0.293895, 0.251069, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -9715,9 +9797,9 @@
 , 			{
 				"name" : "helpfile_label-1",
 				"default" : 				{
-					"fontname" : [ "Arial" ],
 					"fontsize" : [ 13.0 ],
-					"textcolor" : [ 0.501961, 0.501961, 0.501961, 1.0 ]
+					"textcolor" : [ 0.501961, 0.501961, 0.501961, 1.0 ],
+					"fontname" : [ "Arial" ]
 				}
 ,
 				"parentstyle" : "",
@@ -9914,8 +9996,8 @@
 				"default" : 				{
 					"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"elementcolor" : [ 0.32549, 0.345098, 0.372549, 0.44 ],
-					"bgcolor" : [ 0.878431, 0.878431, 0.858824, 1.0 ],
 					"selectioncolor" : [ 0.862745, 0.741176, 0.137255, 0.7 ],
+					"bgcolor" : [ 0.878431, 0.878431, 0.858824, 1.0 ],
 					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"patchlinecolor" : [ 0.65, 0.65, 0.65, 0.9 ],
 					"color" : [ 0.345098, 0.513725, 0.572549, 0.78 ],
@@ -9964,8 +10046,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-					"fontsize" : [ 12.059008 ]
+					"fontsize" : [ 12.059008 ],
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
