@@ -317,9 +317,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 110.0, 440.0, 178.0, 23.0 ],
+					"patching_rect" : [ 110.0, 440.0, 190.0, 23.0 ],
 					"style" : "",
-					"text" : "jit.gl.gridshape @shape cube"
+					"text" : "jit.gl.gridshape @shape sphere"
 				}
 
 			}
