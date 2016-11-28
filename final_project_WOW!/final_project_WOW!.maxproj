@@ -2,8 +2,8 @@
 	"name" : "final_project_WOW!",
 	"version" : 1,
 	"creationdate" : -732300580,
-	"modificationdate" : -731867674,
-	"viewrect" : [ -581.0, 155.0, 300.0, 500.0 ],
+	"modificationdate" : -731845171,
+	"viewrect" : [ 8.0, 155.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -22,6 +22,11 @@
 			}
 ,
 			"worlddeath.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"treemodel01.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
