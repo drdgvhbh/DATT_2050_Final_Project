@@ -2,8 +2,8 @@
 	"name" : "final_project_WOW!",
 	"version" : 1,
 	"creationdate" : -732300580,
-	"modificationdate" : -731769401,
-	"viewrect" : [ 8.0, 204.0, 368.0, 625.0 ],
+	"modificationdate" : -731688944,
+	"viewrect" : [ -782.0, 161.0, 368.0, 620.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -26,6 +26,11 @@
 			}
 ,
 			"treemodel01.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"reBirth.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
