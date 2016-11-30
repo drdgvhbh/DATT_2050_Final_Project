@@ -19,6 +19,11 @@ var scaleScalar = util.getRandom( 0.04, 0.04 );
 var scale = new Vector( scaleScalar, scaleScalar, scaleScalar );
 var origin = getOrigin();
 this.position = new Vector( origin );
+this.release = false;
+
+function releaseNow() {
+	this.release = true;
+}
 
 function getOrigin() {
 	return new Vector( util.getRandom( 2 * ( aLimit * screenSizeRatio + this.getScale().x ), -( aLimit * screenSizeRatio + this.getScale().x ) ), 
@@ -32,6 +37,7 @@ function bang() {
 		this.getPosition().z );
 	*/
 	checkBounds( this.getPosition());
+
 }
 
 function reset() {
@@ -83,21 +89,22 @@ function outScale() {
 
 // Check if the object has exceeded the screen on the positive Y-axis or exceed some arbitary value on the negative Y-axis
 function checkBounds() {
-	var YLimit = (Math.abs(this.getPosition().z) * ( aLimit + this.getScale().y) ); //The upper limit of the screen, changes as the object moves back
-	var YLimitLower = (-(Math.abs(this.getPosition().z) * ( aLimit + this.getScale().y) ) ) - (this.getScale().y * 1.1); 
-	if ( this.getPosition().y < YLimitLower ) {
-		this.setPosition( this.getPosition().x, YLimit, this.getPosition().z );
-		randomX();
-		this.getPosition().z = util.getRandom( 1.5, -2.5);
-		var r = util.getRandom( 0.1, 0.1 );
-		this.setScale(r, r, r);
-		this.outPosition();
+	if ( this.release == false ) {
+		var YLimit = (Math.abs(this.getPosition().z) * ( aLimit + this.getScale().y) ); //The upper limit of the screen, changes as the object moves back
+		var YLimitLower = (-(Math.abs(this.getPosition().z) * ( aLimit + this.getScale().y) ) ) - (this.getScale().y * 1.1); 
+		if ( this.getPosition().y < YLimitLower ) {
+			this.setPosition( this.getPosition().x, YLimit, this.getPosition().z );
+			randomX();
+			this.getPosition().z = util.getRandom( 1.5, -2.5);
+			var r = util.getRandom( 0.1, 0.1 );
+			this.setScale(r, r, r);
+			this.outPosition();
 
-		outlet( 1, new Array( "ease", 0.0 ) );
-		outlet( 1, new Array( "move", 0., 0., 0. ) );
-		outlet( 1, new Array( "ease", 0.5 ) );
+			outlet( 1, new Array( "ease", 0.0 ) );
+			outlet( 1, new Array( "move", 0., 0., 0. ) );
+			outlet( 1, new Array( "ease", 0.5 ) );
+		}
 	}
-
 }	
 
 function randomX() {
