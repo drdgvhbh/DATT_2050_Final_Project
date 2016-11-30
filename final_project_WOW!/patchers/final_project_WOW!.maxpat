@@ -38,6 +38,19 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-281",
+					"linecount" : 13,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 176.0, 278.5, 681.800049, 186.0 ],
+					"style" : "",
+					"text" : "https://cycling74.com/forums/topic/making-bump-normal-maps-for-use-with-jit-gl-material/\nhttp://www.textures.com/download/waterplants0055/52047?q=toxichttp://visibleearth.nasa.gov/search.php?cx=002358070019171462865%3Ajkcajjtgk4q&cof=FORID%3A9&q=pollution&sa=search\nhttps://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Air_pollution.jpg/1024px-Air_pollution.jpg\nhttps://pixabay.com/en/waste-garbage-garbage-bag-dump-1741127/\nhttp://www.textures.com/browse/garbage-containers/2534\nhttp://news.nationalgeographic.com/2015/04/150411-pictures-weather-storm-climate-change-hurricane-tornado-lightning/#/11extremeweather.ngsversion.1470938452282.jpg\nhttps://pmm.nasa.gov/articles/extreme-weather-photo-contest-winners\nhttp://s3.amazonaws.com/spoonflower/public/design_thumbnails/0103/7946/rrblack_trash_bag_only_2_mirror.png\nhttps://pixabay.com/en/horsehead-nebula-dark-nebula-11081/\nhttps://pixabay.com/en/centaurus-a-ngc-5128-galaxy-11190/\nhttp://img13.deviantart.net/b308/i/2015/101/3/0/lava_texture_by_cosmicmoonshine-d8p6loo.png"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-270",
 					"maxclass" : "comment",
 					"numinlets" : 1,
